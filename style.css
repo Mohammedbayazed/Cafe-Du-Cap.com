@@ -412,11 +412,21 @@ h3{
     padding: 0;
     text-align: left;
 }
-.Option-col h3{
+.Option-col a{
+    text-decoration: none;
+    font-size: 20px;
     margin-top: 16px;
     margin-bottom: 15px;
+    display: block;
     text-align: left;
+    color: #000;
+    font-weight: bold;
 }
+
+.Option-col a:hover {
+    text-decoration: underline;
+} 
+
 @media(max-width: 500px){
     .Option-col p{
         text-align: center;
