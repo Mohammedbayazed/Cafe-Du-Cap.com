@@ -428,8 +428,13 @@ h3{
 } 
 
 @media(max-width: 500px){
+    .Option p{
+        margin-bottom: 15px;
+    }
+
     .Option-col p{
         text-align: center;
+        margin-bottom: 15px;
     }
 }
 .facilities{
