@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
         <meta name="viewport" content="with=device-width, initial-scale=1.0">
         <title>Home</title>
         <link rel="stylesheet" href="style.css">
@@ -8,21 +9,20 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@500&display=swap" rel="stylesheet">
     </head>
     <body>
 <section class="header">
     <nav>
-        <a href="index.html"><img src="images/final logo.png"></a>
-        <div class="nav-links" id="navLinks">
-            <i class="fa fa-times" onclick="hideMenu()"></i>
-            <ul>
+        <a href="index.html"><img src="images/coffee_logo-removebg-preview.png"></a>
+        <!-- <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i> -->
+            <!-- <ul>
             <li><a href="index.html">HOME</a></li>
-            <li><a href="about-us.html">ABOUT</a></li>
-            <li><a href="course.html">COURSE</a></li>
             <li><a href="contact_us.html">CONTACT</a></li>
-        </ul>
-        </div>
-        <i class="fa fa-bars" onclick="showMenu()"></i>
+        </ul> -->
+        <!-- </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i> -->
         <!-- <button class="btnLogin">Login</button> -->
     </nav>
 
@@ -101,10 +101,11 @@
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> -->
 
     <div class="text-box">
-        <h1>Two Ceez Fitness</h1>
-        <p>Welcome to Two Ceez Fitness – Your path to a healthier, happier lifestyle begins here.<br>
-             Discover a world of fitness options tailored just for you. Let's embark on this journey together.</p>
-        <a href="about-us.html" class="hero-btn">Visit us to know more</a>
+        <h1>Cafe Du Cap</h1>
+        <p>
+            Welcome to Cafe Du Cap! Discover exceptional coffee, delectable pastries, and savory delights in a cozy ambiance.<br>
+             Experience genuine hospitality and indulge in the finest flavors. Your haven for delightful moments.</p>
+        <a href="#about-us" class="hero-btn" onclick="scrollToSection(event)">To know more</a>
     </div>
 </section>
 
@@ -167,8 +168,250 @@
 
 </section> -->
 
-<section class="Option">
-    <h1>Our Options</h1>
+ <section class="Option">
+    <h1>Our Menu</h1>
+
+<div class="menu-section" onclick="showPopup('breakfast')">BREAKFAST</div>
+<div class="menu-section" onclick="showPopup('drink')">DRINKS</div>
+<div class="menu-section" onclick="showPopup('dinner')">DINNER</div>
+<div class="menu-section" onclick="showPopup('mains')">MAINS</div>
+
+<div id="breakfast" class="page popup-container">
+    <div class="popup">
+        <i class="fa fa-times" onclick="closePopup()"></i>
+        <p class="dish-name" style="color: #fb2521;">UNTIL 11h30</p>
+        <p class="dish-description">Freshly baked croissant with butter and jam 
+            on the side</p>
+        <p class="dish-price">R55</p>
+
+        <p class="dish-description">Smashed Avo with poached egg</p>
+        <p class="dish-price">
+            R110 
+           <br> Add bacon R30</p>
+
+        <p class="dish-description">Egg Mimosa - A Paris breakfast fave. Three
+            hard boiled eggs, chopped and mixed with
+            mustard, lemon and secret herbs</p>
+        <p class="dish-price">R85</p>
+
+        <p class="dish-description">Scrambled egg and bacon R90
+            Benedict with bacon</p>
+        <p class="dish-price">R140</p>
+
+        <p class="dish-description">Florentine with salmon trout & spinach</p>
+        <p class="dish-price">R150</p>
+
+        <p class="dish-description">Provençal (black mush & spinach).</p>
+        <p class="dish-price">R140</p>
+
+        <p class="dish-description">Du Cap Farmer’s Breakfast with scrambled 
+            eggs, mushrooms, grilled tomato</p>
+        <p class="dish-price">
+            R110
+            <br>Add bacon R30
+            <br>Add avo R35
+        </p>
+
+        <p class="dish-description">Decadent Waffle – Waffle with smashed avo, 
+            hollandaise, smoked salmon and two 
+            poached eggs</p>
+        <p class="dish-price">R170</p>
+
+        <p class="dish-description">Brekki Risotto – Creamy risotto with 
+            parmesan, bacon + 2 poached eggs</p>
+        <p class="dish-price">R140</p>
+
+        <p class="dish-description">Du Cap Omelette with 3 eggs, caramalised 
+            onions, cream, sage and mozzarella</p>
+        <p class="dish-price">R150</p>
+
+        <p class="dish-description">Ciabatta Brekkie Stack with fried egg, crispy 
+            bacon, crème fraîche and rocket</p>
+        <p class="dish-price">R95</p>
+
+        <p class="dish-description">Granola with plain yoghurt, honey and 
+            seasonal fruit</p>
+        <p class="dish-price">R89</p>
+    </div>
+</div>
+
+
+<div id="drink" class="page popup-container">
+  <div class="popup">
+    <i class="fa fa-times" onclick="closePopup()"></i>
+    <p class="dish-name" style="color: #eb9c0a; font-family: 'Dancing Script', cursive;">COFFEE</p>
+
+    <div class="drink-item">
+        <p class="dish-description-drnk" style="font-weight: bold;">Americano</p>
+        <p class="dish-price-drnk" style="color: #259304">R30</p>
+    </div>
+
+    <div class="drink-item">
+        <p class="dish-description-drnk" style="font-weight: bold;">Macchiato</p>
+        <p class="dish-price-drnk" style="color: #259304">R30</p>
+    </div>
+
+    <div class="drink-item">
+        <p class="dish-description-drnk" style="font-weight: bold;">Cappuccino / Flat White / Latte</p>
+        <p class="dish-price-drnk" style="color: #259304">R35</p>
+    </div>
+
+        <div class="drink-item">
+        <p class="dish-description-drnk" style="font-weight: bold;">Chai Latte</p>
+        <p class="dish-price-drnk" style="color: #259304">R40</p>
+        </div>
+
+        <div class="drink-item">
+        <p class="dish-description-drnk" style="font-weight: bold;">Cortado</p>
+        <p class="dish-price-drnk" style="color: #259304">R35</p>
+        </div>
+
+        <div class="drink-item">
+        <p class="dish-description-drnk" style="font-weight: bold;">Espresso</p>
+        <p class="dish-price-drnk" style="color: #259304">R25</p>
+        </div>
+
+        <div class="drink-item">
+        <p class="dish-description-drnk" style="font-weight: bold;">Ristretto</p>
+        <p class="dish-price-drnk" style="color: #259304">R25</p>
+        </div>
+
+        <div class="drink-item">
+        <p class="dish-description-drnk" style="font-weight: bold;">Oat / Almond Milk</p>
+        <p class="dish-price-drnk" style="color: #259304">R12</p>
+        </div>
+
+        <div class="drink-item">
+        <p class="dish-description-drnk" style="font-weight: bold;">Tall / Double shot</p>
+        <p class="dish-price-drnk" style="color: #259304">R12</p>
+        </div> 
+
+        <p class="dish-name" style="color: #eb9c0a; font-family: 'Dancing Script', cursive;">TEA</p>
+        
+        <div class="drink-item">
+        <p class="dish-description-drnk" style="font-weight: bold;">Ceylon, Rooibos, English Breakfast, 
+            Mint, Green tea</p>
+        <p class="dish-price-drnk" style="color: #259304">R30</p>
+        </div> 
+
+        <div class="drink-item">
+        <p class="dish-description-drnk" style="font-weight: bold;">Red Espresso</p>
+        <p class="dish-price-drnk" style="color: #259304">R30</p>
+        </div> 
+ 
+ 
+    </div>
+  </div>
+
+<div id="dinner" class="page popup-container">
+  <div class="popup">
+    <i class="fa fa-times" onclick="closePopup()"></i>
+   <p>Dinner items go here.</p>
+   </div>
+</div>
+
+<div id="mains" class="page popup-container">
+    <div class="popup">
+        <i class="fa fa-times" onclick="closePopup()"></i>
+  <p class="dish-description">Beef Fillet perfection (250g) with frites, 
+    homemade mayo and Café de Paris butter</p>
+  <p class="dish-price">R275</p>
+     
+  <p class="dish-description">Creamy Mushroom Risotto with garlic, 
+    onions, herbs and parmesan. Drizzled with 
+    truffle oil.</p>
+  <p class="dish-price">R175</p>
+
+  <p class="dish-description">Grilled Calamari (see starter description) 
+    served with side veg and chips or rice.</p>
+  <p class="dish-price">R225</p>
+
+  <p class="dish-description">Fried Calamari served with homemade mayo, 
+    side veg and chips or rice</p>
+  <p class="dish-price">R235</p>
+
+  <p class="dish-description">Seafood Pasta with prawns, mussels, 
+    calamari and creamy garlic, chilli & white 
+    wine sauce</p>
+  <p class="dish-price">R275</p>
+     
+  <p class="dish-description">Baked Garlic Butter King Prawns (400g)
+    drizzled in garlic and chilli, served with rice, 
+    frites, garlic chilli sauce + peri-peri sauce</p>
+  <p class="dish-price">R295</p>
+
+  <p class="dish-description">Hake & Chips fried to perfection in our 
+    homemade batter and served with frites and 
+    homemade tartare sauce </p>
+  <p class="dish-price">R175</p>
+
+  <p class="dish-description">Platter for two with fruit, Hartlief rare roast 
+    beef, nachos, pulled lamb, hummus, Judy’s 
+    pickles, Hartlief Italian salami, Parma ham, 
+    Camembert, olives, ciabatta and deep fried 
+    zucchini </p>
+  <p class="dish-price">R1200</p>
+</div>
+</div>
+    <!-- <div class="menu-section  longer-hover">
+        <a href="dinner.html">PIZZA /DRINKS /SWEETS</a>
+    </div> -->
+    <!-- <div class="menu-container">
+    <div class="menu-item">
+        <div class="dish-image-container">
+        <img src="images/SB.jpg" alt="SB" class="dish-image">
+        </div>
+        <p class="dish-name">Spaghetti Bolognese</p>
+        <p class="dish-description">Classic Italian pasta with rich meat sauce.</p>
+        <p class="dish-price">$12.99</p>
+    </div>
+
+    <div class="menu-item">
+        <div class="dish-image-container">
+        <img src="GC.jpg" alt="GCS" class="dish-image">
+        </div>
+        <p class="dish-name">Grilled Chicken Salad</p>
+        <p class="dish-description">Fresh greens topped with grilled chicken breast.</p>
+        <p class="dish-price">$9.99</p>
+    </div>
+
+    <div class="menu-item">
+        <div class="dish-image-container">
+        <img src="MP.jpg" alt="MP" class="dish-image">
+        </div>
+        <p class="dish-name">Margherita Pizza</p>
+        <p class="dish-description">Traditional pizza with tomato, mozzarella, and basil.</p>
+        <p class="dish-price">$14.99</p>
+    </div>
+
+    <div class="menu-item">
+        <div class="dish-image-container">
+        <img src="MP.jpg" alt="MP" class="dish-image">
+        </div>
+        <p class="dish-name">Margherita Pizza</p>
+        <p class="dish-description">Traditional pizza with tomato, mozzarella, and basil.</p>
+        <p class="dish-price">$14.99</p>
+    </div>
+
+    <div class="menu-item">
+        <div class="dish-image-container">
+        <img src="MP.jpg" alt="MP" class="dish-image">
+        </div>
+        <p class="dish-name">Margherita Pizza</p>
+        <p class="dish-description">Traditional pizza with tomato, mozzarella, and basil.</p>
+        <p class="dish-price">$14.99</p>
+    </div>
+
+    <div class="menu-item">
+        <div class="dish-image-container">
+        <img src="MP.jpg" alt="MP" class="dish-image">
+        </div>
+        <p class="dish-name">Margherita Pizza</p>
+        <p class="dish-description">Traditional pizza with tomato, mozzarella, and basil.</p>
+        <p class="dish-price">$14.99</p>
+    </div>
+    </div> -->
+    <!-- <h1>Our Options</h1>
     <p>Explore our diverse options tailored for you – fitness, wellness, and more. 
         Your journey to a better you starts with our customizable choices</p>
 
@@ -185,23 +428,48 @@
             <p>Elevate your fitness with expert guidance and a supportive community at our state-of-the-art
                  facility. Join us for a healthier, stronger you!</p>
         </div>
+    </div> -->
+    
+
+</section> 
+
+<section id="about-us" class="about-us">
+
+    <div class="row">
+        <div class="about-col">
+            <h1>Know us more</h1>
+            <p>Welcome to Cafe Du Cap, where passion meets perfection in every cup.
+               Nestled in the heart of Cape Town, our coffee shop is 
+               a haven for coffee enthusiasts and casual sippers alike. <br><br>
+
+                At Cafe Du Cap, we believe in more than just serving coffee; we create moments.
+                Our cozy and inviting atmosphere provides the perfect backdrop for catching up with friends,
+                diving into a good book, or simply savoring the aroma of freshly brewed coffee. <br><br>
+
+                Beyond the brew, we embrace a sense of community and connection. Cafe Du Cap is more than
+                 a place to grab your favorite cup of coffee; it's a gathering spot where conversations flow, ideas percolate, and smiles are shared. 
+            </p>
+        </div>
+        <div class="about-col">
+            <img src="images/about us pic.jpg">
+            </div>
     </div>
-
-
 </section>
 
-<section class="testimonials">
+<!-- <section class="testimonials">
     <h1>What Our members says</h1>
 
     <div class="row">
         <div class="testimonial-col">
             <img src="images/icon.jpeg">
         <div>
-        <p> "The exercise/gym plans were tailored to fit my goals.
-             Intensity gradually increased as weeks went by but 
-             I hardly felt it. Overall, I'm a happy client"
+        <p> "What acharming small restaurant, a  hidden juwele here in Newlands.
+            Lovely and cool, even here on the honest summer midday.
+            <br>Food: 5
+            <br>Service: 5
+            <br>Atmosphere: 5"
         </p>
-        <h3>Owami Dlamini</h3>
+        <h3>Es* Louw</h3>
         <i class="fa fa-star"></i>
         <i class="fa fa-star"></i>
         <i class="fa fa-star"></i>
@@ -212,8 +480,12 @@
     <div class="testimonial-col">
         <img src="images/icon.jpeg">
     <div>
-    <p>"The workouts were lit but manageable and the results were worth it.
-         Got in better shape and did things I didn't think I could afterwards"</p>
+    <p>"2023: still a great place to enjoy a nice lunch and relax. Waitress was great and the vibe was totally chilled.
+        2022 : Thank you Ben for your kind and great service. Made a light lunch all the more special. Nice ambience and on the day,
+        great music and great weather. So much so, my friend wanted to vegitate there for a lot longer.
+        <br>Food: 5
+        <br>Service: 5
+        <br>Atmosphere: 5"</p>
     <h3>Ropafadzo Kanyenze</h3>
     <i class="fa fa-star"></i>
     <i class="fa fa-star"></i>
@@ -226,20 +498,20 @@
 </section>
 
 <section class="cta">
-    <h1>Enroll for our courses anywhere <br>  
+    <h1>Enroll for our restaurant anywhere <br>  
      we come on your mind</h1>
     <a href="contact_us.html" class="hero-btn">CONTANT</a>
-</section>
+</section> -->
 
 <section class="footer">
-    <h4>About Us</h4>
-    <p>Dive into the heart of Two Ceez Fitness. Discover our mission, values, and the passionate team driving your wellness journey.<br>
-         Learn more about the inspiration behind our commitment to helping you achieve your health and fitness goals</p>
+    <!-- <h4>About Us</h4>
+    <p>Cafe Du Cap, where exceptional coffee meets community. Savor handcrafted perfection in every cup, crafted with the finest globally sourced beans.<br>
+         Our inviting space is a hub for connection, laughter, and of course, great coffee.</p> -->
         <div class="icons">
-            <i class="fa fa-facebook"></i>
+            <!-- <i class="fa fa-facebook"></i>
             <i class="fa fa-twitter"></i>
             <i class="fa fa-instagram"></i>
-            <i class="fa fa-linkedin"></i>
+            <i class="fa fa-linkedin"></i> -->
         </div>
         <p>made with  <i class="fa fa-heart-o"></i></p>
 </section>
@@ -255,9 +527,39 @@ function hideMenu(){
 }
 </script>
 
+<script>
+            function scrollToSection(event) {
+            event.preventDefault();
+
+            var targetId = event.currentTarget.getAttribute("href").substring(1);
+            var targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                    inline: "nearest"
+                });
+            }
+        }
+
+</script>
+
+<script>
+    function showPopup(menuId) {
+    var popup = document.getElementById(menuId);
+    popup.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closePopup() {
+    var popups = document.getElementsByClassName('popup-container');
+    for (var i = 0; i < popups.length; i++) {
+      popups[i].style.display = 'none';
+    }
+    document.body.style.overflow = ''; 
+  }
   
-
-
-
+</script>
     </body>
 </html>
