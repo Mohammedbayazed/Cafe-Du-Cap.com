@@ -518,6 +518,9 @@ h3{
     overflow-y: auto;
     max-height: 80vh; 
     width: 50%;
+     @media (max-width: 600px) {
+        width: 80%; 
+    }
   }
 
 .Option .popup .fa{
