@@ -6,7 +6,7 @@
 .header{
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/main\ pic.png);
+    background-image: linear-gradient(rgba(86, 90, 106, 0.7),rgba(0, 0, 0, 0.7)),url(images/main\ pic.png);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -18,9 +18,10 @@ nav{
     align-items: center;
 }
 nav img{
-    width: 150px;
+    width: 200px;
+    background-image: linear-gradient(rgba(244, 138, 0, 0.7),rgba(0, 0, 0, 0.7))
 }
-.btnLogin{
+/* .btnLogin{
 width: 130px;
 height: 50px;
 background: transparent;
@@ -77,8 +78,8 @@ transition: transform .5s ease, height .2s ease;
 
 .box.active .form-box.log{
     transition: none;
-    transform: translateX(-400px);
-}
+    transform: translateX(-400px); */
+/* }
 
 
 .box .form-box.reg{
@@ -208,7 +209,7 @@ transition: transform .5s ease, height .2s ease;
 
 .login-reg p a:hover{
     text-decoration: underline;
-}
+} */
 
 .nav-links{
     flex: 1;
@@ -273,9 +274,12 @@ transition: transform .5s ease, height .2s ease;
 nav .fa{
     display: none;
 }
-@media(max-width: 500px){
+@media(max-width: 400px){
+    nav img{
+        width: 150px;
+    }
     .text-box h1{
-        font-size: 20px;
+        font-size: 30px;
     }
     .nav-links ul li{
         display: block;
@@ -518,7 +522,8 @@ h3{
     overflow-y: auto;
     max-height: 80vh; 
     width: 50%;
-     @media (max-width: 600px) {
+
+    @media (max-width: 600px) {
         width: 80%; 
     }
   }
@@ -566,6 +571,7 @@ h3{
     margin-top: -10px;
     margin-bottom: -5px;
   }
+
 
 .Option-col{
     flex-basis: 31%;
@@ -729,9 +735,13 @@ h3{
 
 .about-us{
     width: 80%;
-    margin: auto;
-    padding-top: 80px;
-    padding-bottom: 50px;
+    margin-left: 31%;
+    display: flex;
+    align-items: center;
+}
+.about-us h1 {
+    text-align: center;
+    color: #333;
 }
 
 .about-col{
@@ -742,12 +752,14 @@ padding: 30px 2px;
 .about-col img{
     width: 100%;
 }
-
-.about-col h1{
-    padding-top: 0;
-}
 .about-col p{
     padding: 15px 0 25px;
+}
+
+@media(max-width: 400px){
+    .about-us{
+        margin-left: 10%;
+    }
 }
 
 .red-btn{
