@@ -105,7 +105,7 @@
         <p>
             Welcome to Cafe Du Cap! Discover exceptional coffee, delectable pastries, and savory delights in a cozy ambiance.<br>
              Experience genuine hospitality and indulge in the finest flavors. Your haven for delightful moments.</p>
-        <a href="#about-us" class="hero-btn" onclick="scrollToSection(event)">To know more</a>
+        <!-- <a href="#about-us" class="hero-btn" onclick="scrollToSection(event)">To know more</a> -->
     </div>
 </section>
 
@@ -433,7 +433,7 @@
 
 </section> 
 
-<section id="about-us" class="about-us">
+<!-- <section id="about-us" class="about-us">
 
     <div class="row">
         <div class="about-col">
@@ -452,7 +452,7 @@
             </p>
         </div>
     </div>
-</section>
+</section> -->
 
 <!-- <section class="testimonials">
     <h1>What Our members says</h1>
@@ -526,21 +526,19 @@ function hideMenu(){
 </script>
 
 <script>
-            function scrollToSection(event) {
-            event.preventDefault();
-
-            var targetId = event.currentTarget.getAttribute("href").substring(1);
-            var targetElement = document.getElementById(targetId);
-
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start",
-                    inline: "nearest"
-                });
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            console.log(entry)
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            } else {
+                entry.target.classList.remove('show');
             }
-        }
+        });
+    });
 
+    const hiddenElements = document.querySelectorAll('.menu-section');
+    hiddenElements.forEach((el) => observer.observe(el));
 </script>
 
 <script>
